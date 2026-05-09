@@ -9,12 +9,13 @@ Community plugins for [SaveManager](https://github.com/msh31/SaveManager). Plugi
    - **macOS:** `~/Library/Application Support/savemanager/plugins/`
 3. Refresh in-app (Ctrl+R) or restart
 
-Plugins load from the plugins directory directly, ignore the folder structure in this repo, it's just for browsing.
+Tip: Clone this repository in as your plugins folder directory to have access to all plugins!
 
 ## Plugins
 | Game | File | Status | Platforms |
 |------|------|--------|-----------|
 | Cyberpunk 2077 | [cyberpunk2077.lua](C/cyberpunk2077.lua) | working | Linux, Windows, macOS |
+| Ghost of Tsushima | [ghost_of_tsushima.lua](G/ghost_of_tsushima.lua) | working | Linux, Windows |
 | Hitman 2 | — | wanted | — |
 
 - Working
