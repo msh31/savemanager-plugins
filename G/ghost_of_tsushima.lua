@@ -1,0 +1,24 @@
+print("Ghost of Tsushima plugin loaded")
+
+config = {
+    show_parent_path = true
+}
+
+function find_saves()
+    local games = {}
+    if is_windows() then
+        local path = home_dir() .. "/Documents/Ghost of Tsushima DIRECTOR'S CUT/"
+        if path_exists(path) then
+                games[#games + 1] = { game_name = "Ghost of Tsushima DIRECTOR'S CUT", appid = "2215430", save_path = path }
+        end
+    elseif is_linux() then
+        local libs = steam_library_paths()
+        for _, lib in ipairs(libs) do
+            local path = lib .. "/steamapps/compatdata/2215430/pfx/drive_c/users/steamuser/Documents/Ghost of Tsushima DIRECTOR'S CUT/"
+            if path_exists(path) then
+                games[#games + 1] = { game_name = "Ghost of Tsushima DIRECTOR'S CUT", appid = "2215430", save_path = path }
+            end
+        end
+    end
+    return games
+end
