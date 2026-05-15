@@ -1,5 +1,3 @@
-print("Ghost of Tsushima plugin loaded")
-
 config = {
     show_parent_path = true
 }
